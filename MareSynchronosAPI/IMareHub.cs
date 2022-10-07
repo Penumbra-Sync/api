@@ -74,7 +74,6 @@ namespace MareSynchronos.API
         void OnAdminForcedReconnect(Action act);
         void OnAdminDeleteBannedUser(Action<BannedUserDto> dto);
         void OnAdminDeleteForbiddenFile(Action<ForbiddenFileDto> act);
-        void OnAdminDeletePairedPlayer(Action<string, bool> act);
         void OnAdminUpdateOrAddBannedUser(Action<BannedUserDto> dto);
         void OnAdminUpdateOrAddForbiddenFile(Action<ForbiddenFileDto> dto);
     }
