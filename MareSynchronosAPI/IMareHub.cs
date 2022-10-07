@@ -71,7 +71,7 @@ namespace MareSynchronos.API
         void OnUserChangePairedPlayer(Action<string, bool> act);
         void OnGroupChange(Action<GroupDto> act);
         void OnGroupUserChange(Action<GroupPairDto> act);
-        void OnAdminForcedReconnect();
+        void OnAdminForcedReconnect(Action act);
         void OnAdminDeleteBannedUser(Action<BannedUserDto> dto);
         void OnAdminDeleteForbiddenFile(Action<ForbiddenFileDto> act);
         void OnAdminDeletePairedPlayer(Action<string, bool> act);
