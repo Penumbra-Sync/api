@@ -38,6 +38,7 @@ namespace MareSynchronos.API
         Task GroupLeave(string gid);
         Task GroupRemoveUser(string gid, string uid);
         Task GroupUnbanUser(string gid, string uid);
+        Task<List<string>> GroupCreateTempInvite(string gid, int amount);
         Task<ConnectionDto> Heartbeat(string characterIdentification);
         Task<bool> FilesIsUploadFinished();
         Task UserPushData(CharacterCacheDto characterCache, List<string> visibleCharacterIds);
@@ -49,7 +50,6 @@ namespace MareSynchronos.API
         Task AdminUpdateOrAddBannedUser(BannedUserDto dto);
         Task AdminUpdateOrAddForbiddenFile(ForbiddenFileDto dto);
         Task FilesUploadStreamAsync(string hash, IAsyncEnumerable<byte[]> fileContent);
-
         Task Client_UserUpdateClientPairs(ClientPairDto clientPairDto);
         Task Client_UpdateSystemInfo(SystemInfoDto systemInfo);
         Task Client_UserReceiveCharacterData(CharacterCacheDto clientPairDto, string characterIdent);
