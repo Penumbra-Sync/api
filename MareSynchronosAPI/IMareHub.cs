@@ -4,13 +4,16 @@ using System.Threading.Tasks;
 
 namespace MareSynchronos.API
 {
+    public class MareAuth
+    {
+        public const string Auth = "/auth";
+        public const string AuthCreate = "create";
+        public static string AuthFullPath = Auth + "/" + AuthCreate;
+    }
     public interface IMareHub
     {
         const int ApiVersion = 16;
         const string Path = "/mare";
-        const string Auth = "/auth";
-        const string AuthCreate = "create";
-        string AuthPath => Auth + "/" + AuthCreate;
 
         Task FilesAbortUpload();
         Task<List<OnlineUserDto>> AdminGetOnlineUsers();
