@@ -10,7 +10,7 @@ namespace MareSynchronos.API
         const string Path = "/mare";
         const string Auth = "/auth";
         const string AuthCreate = "create";
-        string AuthPath => Auth + "/" + AuthCreate;
+        static string AuthPath => Auth + "/" + AuthCreate;
 
         Task FilesAbortUpload();
         Task<List<OnlineUserDto>> AdminGetOnlineUsers();
