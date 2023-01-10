@@ -14,8 +14,8 @@ namespace MareSynchronos.API
     public class MareFiles
     {
         public const string Files = "/files";
-        public const string File_Get = "get";
-        public static string CacheGetFullPath = Files + "/" + File_Get;
+        public const string Files_Get = "get";
+        public static string FilesGetFullPath = Files + "/" + Files_Get;
 
         public const string Request = "/request";
         public const string Request_Enqueue = "enqueue";
