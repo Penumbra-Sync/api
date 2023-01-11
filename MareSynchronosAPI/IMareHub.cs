@@ -10,31 +10,6 @@ namespace MareSynchronos.API
         Warning,
         Error
     }
-
-    public class MareFiles
-    {
-        public const string Cache = "/cache";
-        public const string Cache_Get = "get";
-        public static string CacheGetFullPath = Cache + "/" + Cache_Get;
-
-        public const string Request = "/request";
-        public const string Request_Enqueue = "enqueue";
-        public const string Request_RequestFile = "file";
-        public const string Request_CheckQueue = "status";
-
-        public static string RequestEnqueueFullPath = Request + "/" + Request_Enqueue;
-        public static string RequestRequestFileFullPath = Request + "/" + Request_RequestFile;
-        public static string RequestCheckQueueFullPath = Request + "/" + Request_CheckQueue;
-    }
-
-    public class MareAuth
-    {
-
-        public const string Auth = "/auth";
-        public const string Auth_Create = "create";
-        public const string Auth_CreateIdent = "createWithIdent";
-        public static string AuthFullPath = Auth + "/" + Auth_CreateIdent;
-    }
     public interface IMareHub
     {
         const int ApiVersion = 18;
