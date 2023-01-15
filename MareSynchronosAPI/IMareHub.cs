@@ -46,9 +46,6 @@ namespace MareSynchronos.API
         Task GroupUnbanUser(string gid, string uid);
         Task<List<string>> GroupCreateTempInvite(string gid, int amount);
         Task<ConnectionDto> GetConnectionDto();
-        [Obsolete]
-
-        Task<ConnectionDto> Heartbeat(string characterIdentification);
         Task<bool> FilesIsUploadFinished();
         Task UserPushData(CharacterCacheDto characterCache, List<string> visibleCharacterIds);
         Task<List<UploadFileDto>> FilesSend(List<string> fileListHashes);
