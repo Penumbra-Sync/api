@@ -71,6 +71,7 @@ namespace MareSynchronos.API
         Task Client_AdminUpdateOrAddBannedUser(BannedUserDto dto);
         Task Client_AdminUpdateOrAddForbiddenFile(ForbiddenFileDto dto);
         Task Client_ReceiveServerMessage(MessageSeverity messageSeverity, string message);
+        Task Client_DownloadReady(Guid requestId);
     }
 
     public interface IMareHubClient : IMareHub
@@ -87,5 +88,6 @@ namespace MareSynchronos.API
         void OnAdminUpdateOrAddBannedUser(Action<BannedUserDto> dto);
         void OnAdminUpdateOrAddForbiddenFile(Action<ForbiddenFileDto> dto);
         void OnReceiveServerMessage(Action<MessageSeverity, string> act);
+        void OnDownloadReady(Action<Guid> act);
     }
 }
