@@ -31,4 +31,5 @@ public class CharacterData
     public string CustomizePlusData { get; set; } = string.Empty;
     public string PalettePlusData { get; set; } = string.Empty;
     public float HeelsOffset { get; set; } = 0.0f;
+    public string HonorificData { get; set; } = string.Empty;
 }
