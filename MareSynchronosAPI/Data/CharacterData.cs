@@ -33,4 +33,5 @@ public class CharacterData
     public string HonorificData { get; set; } = string.Empty;
     public string ManipulationData { get; set; } = string.Empty;
     public string MoodlesData { get; set; } = string.Empty;
+    public string FakeNameData { get; set; } = string.Empty;
 }
