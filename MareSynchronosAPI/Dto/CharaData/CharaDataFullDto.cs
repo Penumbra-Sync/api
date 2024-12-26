@@ -5,9 +5,8 @@ namespace MareSynchronos.API.Dto.CharaData;
 [MessagePackObject(keyAsPropertyName: true)]
 public record CharaDataFullDto(string Id, string UploaderUID) : CharaDataDto(Id)
 {
-    public string UploaderUID { get; } = UploaderUID;
-    public DateTime CreatedDate { get; }
-    public DateTime UpdatedDate { get; }
+    public DateTime CreatedDate { get; init; }
+    public DateTime UpdatedDate { get; init; }
     public string? Description { get; set; }
     public DateTime? ExpiryDate { get; set; }
     public string? GlamourerData { get; set; }
