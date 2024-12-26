@@ -10,4 +10,5 @@ public record CharaDataDownloadDto(string Id, string UploaderUID) : CharaDataDto
     public string? GlamourerData { get; init; }
     public string? CustomizeData { get; init; }
     public Dictionary<string, List<string>>? FileGamePaths { get; init; } = new(StringComparer.Ordinal);
+    public Dictionary<string, string> FileSwaps { get; init; } = new(StringComparer.Ordinal);
 }
