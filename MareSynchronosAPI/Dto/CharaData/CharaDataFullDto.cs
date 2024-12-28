@@ -21,4 +21,5 @@ public record CharaDataFullDto(string Id, string UploaderUID) : CharaDataDto(Id)
     public ShareTypeDto ShareType { get; set; }
 }
 
+[MessagePackObject(keyAsPropertyName: true)]
 public record GamePathEntry(string HashOrFileSwap, string GamePath);
