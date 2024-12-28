@@ -9,6 +9,7 @@ public record CharaDataUpdateDto(string Id) : CharaDataDto(Id)
     public DateTime? ExpiryDate { get; set; }
     public string? GlamourerData { get; set; }
     public string? CustomizeData { get; set; }
+    public string? ManipulationData { get; set; }
     public List<string>? AllowedUsers { get; set; }
     public List<GamePathEntry>? FileGamePaths { get; set; }
     public List<GamePathEntry>? FileSwaps { get; set; }

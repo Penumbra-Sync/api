@@ -12,6 +12,7 @@ public record CharaDataFullDto(string Id, string UploaderUID) : CharaDataDto(Id)
     public DateTime ExpiryDate { get; set; }
     public string GlamourerData { get; set; } = string.Empty;
     public string CustomizeData { get; set; } = string.Empty;
+    public string ManipData { get; set; } = string.Empty;
     public int DownloadCount { get; } = 0;
     public List<UserData> AllowedUsers { get; set; } = [];
     public List<GamePathEntry> FileGamePaths { get; set; } = [];
