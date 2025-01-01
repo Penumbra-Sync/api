@@ -1,15 +1,14 @@
-﻿using MessagePack;
+﻿using MareSynchronos.API.Data;
+using MessagePack;
 
 namespace MareSynchronos.API.Dto.CharaData;
 
 [MessagePackObject(keyAsPropertyName: true)]
-public record CharaDataDownloadDto(string Id, string UploaderUID) : CharaDataDto(Id)
+public record CharaDataDownloadDto(string Id, UserData Uploader) : CharaDataDto(Id, Uploader)
 {
-    public DateTime UpdatedDate { get; init; }
-    public string? Description { get; init; }
-    public string? GlamourerData { get; init; }
-    public string? CustomizeData { get; init; }
-    public string? ManipulationData { get; set; }
+    public string GlamourerData { get; init; } = string.Empty;
+    public string CustomizeData { get; init; } = string.Empty;
+    public string ManipulationData { get; set; } = string.Empty;
     public List<GamePathEntry> FileGamePaths { get; init; } = [];
     public List<GamePathEntry> FileSwaps { get; init; } = [];
 }

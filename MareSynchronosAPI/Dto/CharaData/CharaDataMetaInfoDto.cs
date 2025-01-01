@@ -1,11 +1,11 @@
-﻿using MessagePack;
+﻿using MareSynchronos.API.Data;
+using MessagePack;
 
 namespace MareSynchronos.API.Dto.CharaData;
 
 [MessagePackObject(keyAsPropertyName: true)]
-public record CharaDataMetaInfoDto(string Id, string UploaderUID) : CharaDataDto(Id)
+public record CharaDataMetaInfoDto(string Id, UserData UploaderUID) : CharaDataDto(Id, UploaderUID)
 {
-    public string Description { get; init; } = string.Empty;
-    public DateTime UpdatedDate { get; init; }
     public bool CanBeDownloaded { get; init; }
+    public List<PoseEntry> PoseData { get; set; } = [];
 }

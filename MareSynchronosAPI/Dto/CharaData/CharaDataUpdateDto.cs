@@ -3,7 +3,7 @@
 namespace MareSynchronos.API.Dto.CharaData;
 
 [MessagePackObject(keyAsPropertyName: true)]
-public record CharaDataUpdateDto(string Id) : CharaDataDto(Id)
+public record CharaDataUpdateDto(string Id)
 {
     public string? Description { get; set; }
     public DateTime? ExpiryDate { get; set; }
@@ -15,4 +15,5 @@ public record CharaDataUpdateDto(string Id) : CharaDataDto(Id)
     public List<GamePathEntry>? FileSwaps { get; set; }
     public AccessTypeDto? AccessType { get; set; }
     public ShareTypeDto? ShareType { get; set; }
+    public List<PoseEntry>? Poses { get; set; }
 }
