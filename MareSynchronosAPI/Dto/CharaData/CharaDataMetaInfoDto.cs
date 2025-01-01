@@ -4,7 +4,7 @@ using MessagePack;
 namespace MareSynchronos.API.Dto.CharaData;
 
 [MessagePackObject(keyAsPropertyName: true)]
-public record CharaDataMetaInfoDto(string Id, UserData UploaderUID) : CharaDataDto(Id, UploaderUID)
+public record CharaDataMetaInfoDto(string Id, UserData Uploader) : CharaDataDto(Id, Uploader)
 {
     public bool CanBeDownloaded { get; init; }
     public List<PoseEntry> PoseData { get; set; } = [];

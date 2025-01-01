@@ -4,7 +4,7 @@ using MessagePack;
 namespace MareSynchronos.API.Dto.CharaData;
 
 [MessagePackObject(keyAsPropertyName: true)]
-public record CharaDataFullDto(string Id) : CharaDataDto(Id, null!)
+public record CharaDataFullDto(string Id, UserData Uploader) : CharaDataDto(Id, Uploader)
 {
     public DateTime CreatedDate { get; init; }
     public DateTime ExpiryDate { get; set; }
