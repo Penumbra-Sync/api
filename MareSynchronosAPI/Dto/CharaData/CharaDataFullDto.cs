@@ -33,7 +33,7 @@ public record PoseEntry(long? Id)
 }
 
 [MessagePackObject]
-public record WorldData
+public record struct WorldData
 {
     [Key(0)] public uint MapId { get; set; }
     [Key(1)] public uint TerritoryId { get; set; }
