@@ -29,5 +29,22 @@ public record PoseEntry(long? Id)
 {
     public string? Description { get; set; } = string.Empty;
     public string? PoseData { get; set; } = string.Empty;
-    public string? WorldData { get; set; } = string.Empty;
+    public WorldData? WorldData { get; set; }
+}
+
+[MessagePackObject]
+public record WorldData
+{
+    [Key(0)] public uint MapId { get; set; }
+    [Key(1)] public uint TerritoryId { get; set; }
+    [Key(2)] public float PositionX { get; set; }
+    [Key(3)] public float PositionY { get; set; }
+    [Key(4)] public float PositionZ { get; set; }
+    [Key(5)] public float RotationX { get; set; }
+    [Key(6)] public float RotationY { get; set; }
+    [Key(7)] public float RotationZ { get; set; }
+    [Key(8)] public float RotationW { get; set; }
+    [Key(9)] public float ScaleX { get; set; }
+    [Key(10)] public float ScaleY { get; set; }
+    [Key(11)] public float ScaleZ { get; set; }
 }
