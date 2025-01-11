@@ -8,7 +8,7 @@ namespace MareSynchronos.API.SignalR;
 
 public interface IMareHub
 {
-    const int ApiVersion = 32;
+    const int ApiVersion = 33;
     const string Path = "/mare";
 
     Task<bool> CheckClientHealth();
