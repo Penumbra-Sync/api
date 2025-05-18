@@ -13,6 +13,7 @@ public record GroupInfoDto(GroupData Group, UserData Owner, GroupPermissions Gro
     public string OwnerUID => Owner.UID;
     public string? OwnerAlias => Owner.Alias;
     public string OwnerAliasOrUID => Owner.AliasOrUID;
+    public string GroupDescription => Group.Description;
 }
 
 public record GroupJoinInfoDto(GroupData Group, UserData Owner, GroupPermissions GroupPermissions, bool Success) : GroupInfoDto(Group, Owner, GroupPermissions);
